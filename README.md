@@ -9,4 +9,4 @@ link do dataset: https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+l
 Autores do projeto:
 
 João Silva (Linkedin: www.linkedin.com/in/joaonatadasilva) 
-Hugo Lima (Linkedin: )
+Hugo Lima (Linkedin: https://www.linkedin.com/in/hugorodrigueslima/)
