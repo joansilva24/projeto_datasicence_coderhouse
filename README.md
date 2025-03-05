@@ -16,7 +16,9 @@ Perguntas:
 - Identificar grupos padrões de comportamento similares em relação à alimentação, atividade física, uso de tecnologia, nível de obesidade 
 
 
+
 ## Data Wrangling
+
 | Nome | Descrição |Resposta | Tipo |
 | --- | --- | --- | --- |
 Gender | Gênero | Masculino / Feminino |object
