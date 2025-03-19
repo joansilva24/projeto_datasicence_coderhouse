@@ -1,13 +1,12 @@
-git# Modelo preditivo Para Obesidade
+# Modelo preditivo Para Obesidade
 Este projeto faz parte da avaliação do curso de ciência de dados pela [Coderhouse](https://www.coderhouse.com/br/?pipe_source=google&pipe_medium=cpc&pipe_campaign=9&gad_source=1&gclid=Cj0KCQjwudexBhDKARIsAI-GWYUYzg8dR_WtLGYV_p8_UJTmY69zBdhG3IXT4KzinPfZG7pkEXDvs8gaAhWfEALw_wcB).<br/>
 Dataset Utilizado para o projeto: [UC_Irvine_Machine_learning_Repository](https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition)
 
 ## Introdução
 
-Neste projeto abordamos como a condição física e hábito alimentar contribuem para a obesidade. Para o este projeto,utilizaremos dados de indivíduos do México, Peru e Colômbia. O dataset é composto por 
+Neste projeto abordamos como a condição física e hábito alimentar contribuem para a obesidade. Para o este projeto, utilizaremos dados de indivíduos do México, Peru e Colômbia. O nosso projeto tenta responder a seguintes perguntas: 
 
-
-Perguntas: 
+ 
 - Influência de vício em cigarro na saúde
 - Qual a propensão de jovens obesos em relação aos idosos?
 - Influência da tecnologia e meio de transporte para o sobrepeso 
@@ -18,6 +17,7 @@ Perguntas:
 
 
 ## Data Wrangling
+Este Dataset é formado por 17 colunas, não contendo valor nulo. Como o foco de nosso trabalho é utilizarmos um modelo preditivo de classificação, utilizaremos a variável **NObeyesdad** como ***target**.*
 
 | Nome | Descrição |Resposta | Tipo |
 | --- | --- | --- | --- |
@@ -39,7 +39,19 @@ CALC | Com que frequência você bebe álcool? | Eu não bebo / Às vezes / Freq
 MTRANS | Qual meio de transporte você costuma usar? | Automóvel / Motocicleta / Bicicleta / Transporte público / Caminhada | object
 NObeyesdad | Nível de obesidade | Abaixo do peso / Normal / Sobrepeso  I / Sobrepeso II / Obesidade I / Obesidade II / Obesidade III | object
 
-Como o foco de nosso trabalho é utilizarmos um modelo preditivo de classificação, utilizaremos a variável **NObeyesdad** como ***target**.*
+Para conseguirmos construir um modelo preditivo e, ao mesmo tempo, mantermos uma versão limpa dos dados, separamos o dataset em dois. No primeiro dataset, chamado de df1, fizemos a transformação dos dados qualitativos para quantitativos, e mantivemos a integridade do segundo dataset, chamado de df2. Com a transformação, o dataset df1 ficou da seguinte forma:
+
+| Nome | Tipo | Resposta |
+| --- | --- | --- | 
+| Smoker | Binary | 0 / 1 | 
+| Alcohol | Int | 0 / 1 / 2 /3 |
+| Food Bt Meals | Int | 0 / 1 / 2 /3 |
+| Mobility | Int | 0 / 0 / 0.5 / 1 / 1 | 
+| Obesity F | Binary | 0 / 1 | 
+| Bad Food | Binary | 0 / 1 |
+| Calories Control | Binary | 0 / 1 |
+
+Como pode-se perceber, foram feitas algumas alterações bem interessantes no dataset df1. Primeiro, mudamos alguns nomes para que houvesse um melhor intendimento do que cada coluna significa. Segundo, criamos uma escala de 0 a 1 para a variável "Mobility", sendo que 0 significa nenhuma mobilidade e 1 significa que houve esforço físico no translado.
 
 ## Análise de Dados
 
