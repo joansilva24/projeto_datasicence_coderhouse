@@ -4,20 +4,20 @@ Dataset Utilizado para o projeto: [UC_Irvine_Machine_learning_Repository](https:
 
 ## Introdução
 
-Neste projeto abordamos como a condição física e hábito alimentar contribuem para a obesidade. Para o este projeto, utilizaremos dados de indivíduos do México, Peru e Colômbia. O nosso projeto tenta responder a seguintes perguntas: 
+Neste projeto abordamos como a condição física e hábitos alimentares contribuem para a obesidade. Para este projeto, utilizaremos dados de indivíduos do México, Peru e Colômbia. O nosso projeto tenta responder às seguintes perguntas: 
 
  
-- Influência de vício em cigarro na saúde
-- Qual a propensão de jovens obesos em relação aos idosos?
-- Influência da tecnologia e meio de transporte para o sobrepeso 
-- Metas mínimas para manter qualidade de vida (atividade física, alimentação, consumo de bebidas, etc)
+- Influência do vício em cigarro na saúde
+- Qual é a propensão de jovens à obesidade em comparação com os idosos?
+- Influência da tecnologia e do meio de transporte no sobrepeso 
+- Metas mínimas para manter a qualidade de vida (atividade física, alimentação, consumo de bebidas, etc)
 - Quais fatores mais contribuem para o desenvolvimento da obesidade (por exemplo, histórico familiar, consumo de alimentos calóricos, ou hábitos de transporte)?
-- Identificar grupos padrões de comportamento similares em relação à alimentação, atividade física, uso de tecnologia, nível de obesidade 
+- Identificar padrões de comportamento similares em relação à alimentação, atividade física, uso de tecnologia, nível de obesidade 
 
 
 
 ## Data Wrangling
-Este Dataset é formado por 17 colunas, não contendo valor nulo. Como o foco de nosso trabalho é utilizarmos um modelo preditivo de classificação, utilizaremos a variável **NObeyesdad** como ***target**.*
+Este dataset é formado por 17 colunas,e não contém valores nulos. Como o foco de nosso trabalho é utilizar um modelo preditivo de classificação, utilizaremos a variável **NObeyesdad** como ***target**.*
 
 | Nome | Descrição |Resposta | Tipo |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ CALC | Com que frequência você bebe álcool? | Eu não bebo / Às vezes / Freq
 MTRANS | Qual meio de transporte você costuma usar? | Automóvel / Motocicleta / Bicicleta / Transporte público / Caminhada | object
 NObeyesdad | Nível de obesidade | Abaixo do peso / Normal / Sobrepeso  I / Sobrepeso II / Obesidade I / Obesidade II / Obesidade III | object
 
-Para conseguirmos construir um modelo preditivo e, ao mesmo tempo, mantermos uma versão limpa dos dados, separamos o dataset em dois. No primeiro dataset, chamado de df1, fizemos a transformação dos dados qualitativos para quantitativos, e mantivemos a integridade do segundo dataset, chamado de df2. Com a transformação, o dataset df1 ficou da seguinte forma:
+Para conseguirmos construir um modelo preditivo e, ao mesmo tempo, manter uma versão limpa dos dados, dividimos o dataset em dois. No primeiro dataset, chamado de df1, fizemos a transformação dos dados qualitativos em quantitativos, e preservamos a integridade do segundo dataset, chamado de df2. Com a transformação, o dataset df1 ficou da seguinte forma:
 
 | Nome | Tipo | Resposta |
 | --- | --- | --- | 
@@ -51,7 +51,7 @@ Para conseguirmos construir um modelo preditivo e, ao mesmo tempo, mantermos uma
 | Bad Food | Binary | 0 / 1 |
 | Calories Control | Binary | 0 / 1 |
 
-Como pode-se perceber, foram feitas algumas alterações bem interessantes no dataset df1. Primeiro, mudamos alguns nomes para que houvesse um melhor intendimento do que cada coluna significa. Segundo, criamos uma escala de 0 a 1 para a variável "Mobility", sendo que 0 significa nenhuma mobilidade e 1 significa que houve esforço físico no translado.
+Como se pode perceber, foram feitas algumas alterações bem interessantes no dataset df1. Primeiro, mudamos alguns nomes para que houvesse um melhor entendimento do que cada coluna significa. Segundo, criamos uma escala de 0 a 1 para a variável "Mobility", onde 0 indica nenhuma mobilidade e 1 representa esforço físico no translado.
 
 ## Análise de Dados
 
