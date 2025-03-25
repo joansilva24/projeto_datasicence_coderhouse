@@ -54,8 +54,36 @@ Para conseguirmos construir um modelo preditivo e, ao mesmo tempo, manter uma ve
 Como se pode perceber, foram feitas algumas alterações bem interessantes no dataset df1. Primeiro, mudamos alguns nomes para que houvesse um melhor entendimento do que cada coluna significa. Segundo, criamos uma escala de 0 a 1 para a variável "Mobility", onde 0 indica nenhuma mobilidade e 1 representa esforço físico no translado.
 
 ## Análise de Dados
+Nesta etapa, realizamos algumas explorações analíticas por meio dos dados e obtivemos os seguintes insights:
+- **Relação entre Altura, Peso e Gênero:** <br/>
+Ao analisarmos os dados, podemos perceber que, quando comparados, os homens apresentam uma relação entre altura e peso maior do que as mulheres.<br/>
 
+- **Proporção de Indivíduos com Histórico Familiar por Nível de Obesidade**:<br/>
+Indivíduos com alto grau de sobrepeso e obesidade tendem a ter histórico familiar de sobrepeso. Com essa informação, podemos deduzir que a relação das pessoas com hábitos alimentares e cuidados físicos pode ter uma origem social, com a perpetuação de padrões existentes em seu círculo social.
+.<br/>
 
+- **Matriz de Correlação entre Variáveis Contínuas**<br/>
+revisar os dados <br/>
+
+- **Quantidade de Indivíduos por Nível de Obesidade - Gênero**<br/>
+mulheres-obesidadetipo3 homens-obesidade2 resto-normal<br/>
+- **Distribuição de Frequência de Atividade Física**<br/>
+Com essa análise, identificamos que, quanto maior o número de dias em que os indivíduos realizam atividade física, menor a propensão ao desenvolvimento de sobrepeso e obesidade. Essa análise refere-se aos dias úteis, considerando que muitas pessoas frequentam academias, por exemplo, antes ou após o trabalho.<br/>
+- **Distribuições de variáveis qualitativas:**<br/>
+ Ao realizarmos uma análise univariada das variáveis qualitativas, obtivemos os seguintes resultados:
+    - **Histórico familiar com sobrepeso**: A maioria dos participantes tem histórico familiar de sobrepeso, totalizando 1.722.
+    - **Frequência de consumo de comidas hipercalóricas**: A maior parte dos participantes consome comidas hipercalóricas, totalizando 1.844.
+    - **Frequência de consumo de vegetais**: Entre os participantes, 1.985 responderam que consomem vegetais sempre ou às vezes.
+    - **Número de refeições principais**: A maioria dos participantes, totalizando 1.446, afirmou fazer até três refeições por dia.
+    - **Consumo de alimentos entre refeições**: 1.761 participantes relataram consumir alimentos entre as refeições.
+    - **Fumante**: A maioria dos participantes afirmou que não fuma, totalizando 2.043.
+    - **Consumo de água diariamente**: A maioria dos participantes consome entre 1L e 2L de água por dia, totalizando 1.107, o dobro do segundo maior grupo, com 502
+    - **Monitoramento de consumo calórico**: 1.991 participantes afirmaram monitorar seu consumo calórico.
+    - **Frequência de atividade física**: Entre os participantes, 1.473 relataram não praticar atividade física ou praticá-la entre uma e duas vezes por semana.
+    - **Tempo de uso de dispositivos tecnológicos**: 1.844 participantes afirmaram passar entre duas e cinco horas utilizando dispositivos tecnológicos.
+    - **Consumo de álcool**: Entre os participantes, 1.380 relataram consumir álcool com baixa frequência.
+    - **Transporte usado**: A maior parte dos participantes afirmou utilizar transporte público, totalizando 1.558.
+- **PCA**: Ao analisarmos o gráfico do PCA, podemos observar que, ao dividirmos a distribuição dos dados em dois agrupamentos, conseguimos explicar 43% dos dados analisados.
 
 ## Modelo preditivo
 
