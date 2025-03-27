@@ -62,11 +62,17 @@ Ao analisarmos os dados, podemos perceber que, quando comparados, os homens apre
 Indivíduos com alto grau de sobrepeso e obesidade tendem a ter histórico familiar de sobrepeso. Com essa informação, podemos deduzir que a relação das pessoas com hábitos alimentares e cuidados físicos pode ter uma origem social, com a perpetuação de padrões existentes em seu círculo social.
 .<br/>
 
-- **Matriz de Correlação entre Variáveis Contínuas**<br/>
-revisar os dados <br/>
+- **Matriz de Correlação entre Variáveis Contínuas**<br/>Com a matriz de correlação, obtivemos os seguintes resultados:
+
+    - Correlação positiva (0,5) entre altura e peso: Ao utilizarmos a fórmula do IMC (Índice de Massa Corporal), que é calculado como peso (kg) / altura (m)², observamos que ambas as variáveis estão relacionadas.
+
+    - Correlação moderada (0,3) entre consumo de alimentos não saudáveis ("bad food") e peso: Isso indica que o hábito de consumir alimentos de baixa qualidade nutricional tende a influenciar o peso.
+
+    - Correlação moderada (0,3) entre atividade física e altura: Uma possível hipótese é a necessidade de um maior gasto calórico conforme a altura aumenta. Isso sugeriria que pessoas mais altas tendem a ter um consumo calórico maior do que pessoas mais baixas.
 
 - **Quantidade de Indivíduos por Nível de Obesidade - Gênero**<br/>
-mulheres-obesidadetipo3 homens-obesidade2 resto-normal<br/>
+Ao avaliar a quantidade de indivíduos por nível de obesidade e gênero, constatamos que homens e mulheres apresentam valores muito próximos. No entanto, há uma exceção nos casos de obesidade tipo II e tipo III: enquanto os homens predominam na obesidade tipo II, as mulheres apresentam maior frequência na obesidade tipo III.<br/>
+
 - **Distribuição de Frequência de Atividade Física**<br/>
 Com essa análise, identificamos que, quanto maior o número de dias em que os indivíduos realizam atividade física, menor a propensão ao desenvolvimento de sobrepeso e obesidade. Essa análise refere-se aos dias úteis, considerando que muitas pessoas frequentam academias, por exemplo, antes ou após o trabalho.<br/>
 - **Distribuições de variáveis qualitativas:**<br/>
@@ -103,10 +109,33 @@ Ao analisarmos os modelos, concluímos que a Floresta Aleatória apresentou o me
 
 - O segundo fator é que, assim como a Regressão Logística, os valores de F1-score e recall da Árvore de Decisão estão muito próximos de 100%. Isso indica que o modelo pode estar superajustado e, portanto, pode não ser capaz de generalizar corretamente as predições quando novos dados forem adicionados.
 
-#### Avaliação por hiperparâmetros
+### Avaliação por Hiperparâmetros
+Para a avaliação por hiperparâmetros, utilizamos o GridSearch. Ao analisarmos os parâmetros dos modelos de Floresta Aleatória, Support Vector Machine e Árvore de Decisão, chegamos aos seguintes resultados:
 
+- **Árvore de Decisão**:
+    - criterion: entropy
+    - max_depth: 5
+    - max_leaf_nodes: 14
+    - splitter: best
+    - random_state: 42 (padrão)
+    - Score obtido: 0,87
+- **Floresta Aleatória**:
+    - criterion: entropy
+    - max_depth: 6
+    - max_leaf_nodes: 14
+    - n_estimators: 100
+    - random_state: 42 (padrão)
+    - Score obtido: 0,88
 
+- **Support Vector Machine**:
+    - C: 5
+    - kernel: linear
+    - Score obtido: 0,97
 
+### Avaliação Cruzada
+Na etapa final do nosso projeto, realizamos uma validação cruzada utilizando os parâmetros com melhor desempenho no GridSearch. O método escolhido para essa validação foi o K-Fold.<br/>
+Com a avaliação cruzada, concluímos que o melhor algoritmo continua sendo a Floresta Aleatória, com 87% de acurácia. O pior resultado foi o do modelo SVM, com 98% de acurácia, o que indica um superajuste, reduzindo a capacidade de generalização do modelo.<br/>
+Por fim, para permitir o uso futuro do modelo para predição, salvamos o arquivo em pickle com o nome modelo_treinado.
 
 
 ## Autores do projeto:
