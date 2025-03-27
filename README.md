@@ -85,7 +85,26 @@ Com essa análise, identificamos que, quanto maior o número de dias em que os i
     - **Transporte usado**: A maior parte dos participantes afirmou utilizar transporte público, totalizando 1.558.
 - **PCA**: Ao analisarmos o gráfico do PCA, podemos observar que, ao dividirmos a distribuição dos dados em dois agrupamentos, conseguimos explicar 43% dos dados analisados.
 
-## Modelo preditivo
+## Modelo Preditivo
+### Ajustes dos Dados e Escolha do Modelo
+Para a criação do nosso modelo preditivo, primeiro foi necessário realizar ajustes nos dados. Criamos um dataframe com as variáveis qualitativas ajustadas utilizando a função get_dummies. Posteriormente, adicionamos as variáveis quantitativas, também ajustadas. Como estamos trabalhando com um modelo preditivo supervisionado, foi necessário separar a variável target do conjunto de treinamento.
+
+Para o nosso projeto, dividimos o dataset na proporção 80/20, sendo 80% dos dados destinados ao treinamento e 20% para o teste. Escolhemos quatro algoritmos de classificação para o nosso modelo: Regressão Logística, Árvore de Decisão, Floresta Aleatória e Support Vector Machine (SVM).
+
+### Métricas de Avaliação do Modelo
+Após o treinamento do modelo, foi necessário avaliar seu desempenho para identificar possíveis ajustes que poderiam melhorar sua performance. Dividimos a avaliação em duas partes: uma análise simples e outra utilizando um algoritmo de ajuste de hiperparâmetros.
+
+#### Avaliação Simples
+Para realizar uma avaliação preliminar do desempenho dos modelos, utilizamos a matriz de confusão para determinar a precisão e a acurácia de cada um.
+
+Ao analisarmos os modelos, concluímos que a Floresta Aleatória apresentou o melhor desempenho para o nosso projeto. Apesar de a Regressão Logística e a Árvore de Decisão terem um recall e um F1-score muito altos, alguns fatores nos levaram a não escolher esses modelos:
+
+- O primeiro fator é que, apesar de ser um algoritmo muito eficiente, a Regressão Logística retorna apenas valores binários, o que não é ideal para o nosso caso.
+
+- O segundo fator é que, assim como a Regressão Logística, os valores de F1-score e recall da Árvore de Decisão estão muito próximos de 100%. Isso indica que o modelo pode estar superajustado e, portanto, pode não ser capaz de generalizar corretamente as predições quando novos dados forem adicionados.
+
+#### Avaliação por hiperparâmetros
+
 
 
 
